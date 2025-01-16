@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Steven Adams - Financial Lawyer Specializing in Crypto Asset Recovery">
+    <title>Steven Adams - Financial Lawyer & Crypto Asset Recovery Expert</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Steven Adams</h1>
+            <p>Financial Lawyer Specializing in Crypto Asset Recovery</p>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <div class="bio">
+                <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Steven Adams" class="profile-image">
+                <h2>About Me</h2>
+                <p>
+                    I am Steven Adams, a financial lawyer based in Switzerland with years of experience working worldwide in crypto asset recovery. I specialize in helping victims of crypto fraud reclaim their funds using cutting-edge tools like Quantum machines and other sophisticated technologies. 
+                </p>
+                <p>
+                    Over the last 7 years, I have helped recover millions of dollars for victims of crypto fraud with a 100% recovery rate. Whether it’s Bitcoin, Ethereum, or any other digital asset, I have the skills and resources to ensure your investments are returned to you.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="recovery-stats">
+        <div class="container">
+            <h2>Crypto Fund Recovery Stats (2018 - 2025)</h2>
+            <canvas id="recoveryChart" width="400" height="200"></canvas>
+            <p>
+                As you can see, my recovery efforts have grown year over year. The graph below showcases the amount of money I have successfully recovered each year for my clients.
+            </p>
+        </div>
+    </section>
+
+    <section class="crypto-risk">
+        <div class="container">
+            <h2>How People Lose Money in Crypto</h2>
+            <p>
+                Many investors lose money in the crypto market due to fraud, scams, and poor guidance. Some of the most common reasons people lose money in crypto include:
+            </p>
+            <ul>
+                <li>Phishing attacks</li>
+                <li>Fake ICOs (Initial Coin Offerings)</li>
+                <li>Ponzi schemes and fraudulent exchanges</li>
+                <li>Unregulated platforms</li>
+                <li>Lack of proper security measures</li>
+            </ul>
+            <p>
+                It’s important to have an experienced guide and legal support when navigating the complex world of crypto investments. I help ensure that you don't fall victim to these types of scams and fraud.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Steven Adams. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const ctx = document.getElementById('recoveryChart').getContext('2d');
+        const recoveryChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                datasets: [{
+                    label: 'Amount Recovered (in Millions)',
+                    data: [4, 12, 7, 47, 27, 56, 72, 1],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    fill: true,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return "$" + tooltipItem.raw + " million";
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) { return "$" + value + "M"; }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
