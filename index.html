@@ -6,7 +6,6 @@
     <meta name="description" content="Steven Adams - Financial Lawyer Specializing in Crypto Asset Recovery">
     <title>Steven Adams - Financial Lawyer & Crypto Asset Recovery Expert</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -89,4 +88,64 @@
     <section class="contact">
         <div class="container">
             <h2>Contact Me</h2>
-            <p>If you need legal advic
+            <p>If you need legal advice or want to start the recovery process, feel free to reach out. I'm here to assist you in regaining your lost crypto funds.</p>
+            <p><strong>Email:</strong> steven.adams@lawyer.com</p>
+            <p><strong>Phone:</strong> +420 720 578 370 (WhatsApp Available)</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/420720578370" target="_blank" class="whatsapp-button">Contact on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Steven Adams. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Include Chart.js Script Here -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('recoveryChart').getContext('2d');
+        const recoveryChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                datasets: [{
+                    label: 'Amount Recovered (in Millions)',
+                    data: [4, 12, 7, 47, 27, 56, 72, 1],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    fill: true,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return "$" + tooltipItem.raw + " million";
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) { return "$" + value + "M"; }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
