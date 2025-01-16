@@ -7,104 +7,86 @@
     <title>Steven Adams - Financial Lawyer & Crypto Asset Recovery Expert</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <div class="container">
+        <div class="container header-content">
             <h1>Steven Adams</h1>
-            <p>Financial Lawyer Specializing in Crypto Asset Recovery</p>
+            <p>Financial Lawyer & Crypto Asset Recovery Expert</p>
         </div>
     </header>
 
+    <!-- About Section -->
     <section class="about">
         <div class="container">
             <div class="bio">
                 <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Steven Adams" class="profile-image">
-                <h2>About Me</h2>
-                <p>
-                    I am Steven Adams, a financial lawyer based in Switzerland with years of experience working worldwide in crypto asset recovery. I specialize in helping victims of crypto fraud reclaim their funds using cutting-edge tools like Quantum machines and other sophisticated technologies. 
-                </p>
-                <p>
-                    Over the last 7 years, I have helped recover millions of dollars for victims of crypto fraud with a 100% recovery rate. Whether it’s Bitcoin, Ethereum, or any other digital asset, I have the skills and resources to ensure your investments are returned to you.
-                </p>
+                <div class="bio-text">
+                    <h2>About Me</h2>
+                    <p>
+                        I am Steven Adams, a financial lawyer based in Switzerland with over 7 years of experience in crypto asset recovery. My expertise lies in helping victims of crypto fraud recover their funds using cutting-edge technologies, including Quantum machines.
+                    </p>
+                    <p>
+                        With a proven 100% recovery rate, I have successfully helped clients worldwide reclaim millions of dollars in lost crypto assets. My services cover the entire process, from identifying fraud to legal action, ensuring your funds are safely restored.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Financial Lawyering Skills -->
+    <section class="skills">
+        <div class="container">
+            <h2>My Financial Lawyering Skills</h2>
+            <p>
+                As a dedicated financial lawyer specializing in crypto law, I possess a wide range of skills, including:
+            </p>
+            <ul>
+                <li><strong>Legal Consulting</strong> - Providing expert legal advice on cryptocurrency investments and security.</li>
+                <li><strong>Crypto Asset Recovery</strong> - Helping victims recover lost or stolen funds from scams, fraud, or faulty investments.</li>
+                <li><strong>Contract Drafting</strong> - Drafting legally binding agreements for crypto transactions, ICOs, and DeFi platforms.</li>
+                <li><strong>Dispute Resolution</strong> - Resolving conflicts related to crypto assets through legal means.</li>
+                <li><strong>Regulatory Compliance</strong> - Ensuring compliance with global crypto regulations and providing guidance on legal risks in the crypto market.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Recovery Stats Section with Graph -->
     <section class="recovery-stats">
         <div class="container">
             <h2>Crypto Fund Recovery Stats (2018 - 2025)</h2>
             <canvas id="recoveryChart" width="400" height="200"></canvas>
             <p>
-                As you can see, my recovery efforts have grown year over year. The graph below showcases the amount of money I have successfully recovered each year for my clients.
+                The graph below showcases the incredible success of my recovery efforts, highlighting the amount of money I have recovered over the past 7 years.
             </p>
         </div>
     </section>
 
+    <!-- How People Lose Money in Crypto -->
     <section class="crypto-risk">
         <div class="container">
             <h2>How People Lose Money in Crypto</h2>
             <p>
-                Many investors lose money in the crypto market due to fraud, scams, and poor guidance. Some of the most common reasons people lose money in crypto include:
+                Many individuals lose money in the cryptocurrency market due to scams and fraud. Here are some common ways people fall victim:
             </p>
             <ul>
                 <li>Phishing attacks</li>
                 <li>Fake ICOs (Initial Coin Offerings)</li>
-                <li>Ponzi schemes and fraudulent exchanges</li>
-                <li>Unregulated platforms</li>
-                <li>Lack of proper security measures</li>
+                <li>Ponzi schemes</li>
+                <li>Fraudulent exchanges</li>
+                <li>Lack of security measures</li>
             </ul>
             <p>
-                It’s important to have an experienced guide and legal support when navigating the complex world of crypto investments. I help ensure that you don't fall victim to these types of scams and fraud.
+                Understanding the risks is essential to navigate the crypto space. Having an experienced legal guide can help you avoid such scams and protect your investments.
             </p>
         </div>
     </section>
 
-    <footer>
+    <!-- Contact Section -->
+    <section class="contact">
         <div class="container">
-            <p>&copy; 2025 Steven Adams. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        const ctx = document.getElementById('recoveryChart').getContext('2d');
-        const recoveryChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
-                datasets: [{
-                    label: 'Amount Recovered (in Millions)',
-                    data: [4, 12, 7, 47, 27, 56, 72, 1],
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                    fill: true,
-                    tension: 0.1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(tooltipItem) {
-                                return "$" + tooltipItem.raw + " million";
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            callback: function(value) { return "$" + value + "M"; }
-                        }
-                    }
-                }
-            }
-        });
-    </script>
-</body>
-</html>
+            <h2>Contact Me</h2>
+            <p>If you need legal advic
